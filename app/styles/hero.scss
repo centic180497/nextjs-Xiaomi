@@ -1,0 +1,37 @@
+.hero {
+    background-image: url('../../public/images/Slider.webp');
+    background-position: center;
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('../../public/images/SlideMobile.webp');
+        background-position: center;
+        height: 339px;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-image: url('../../public/images/SlideMobile.webp');
+        background-position: center;
+        height: 339px;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        background-image: url('../../public/images/SlideMobile.webp');
+        background-position: center;
+        height: 339px;
+        width: 100%;
+        background-size: cover;
+    }
+}

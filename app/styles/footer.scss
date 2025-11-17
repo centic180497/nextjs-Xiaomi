@@ -1,0 +1,175 @@
+.footer {
+    margin-top: var(--dm-80);
+    padding: 40px 0 30px;
+    font-size: 14px;
+    border-top: 1px solid var(--Border-Neutral-Subdued, #383A42);
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding-bottom: 40px;
+
+        h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: var(--dm-16);
+            line-height: var(--dm-28);
+            font-weight: 900;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+
+            li {
+                font-family: var(--font-inter);
+                margin-bottom: 8px;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: var(--dm-14);
+                line-height: var(--dm-20);
+                color: var(--Text-Neutral-Accent, #D2D2D2);
+                font-style: normal;
+            }
+        }
+    }
+
+    .footer__app-btn {
+        img {
+            // width: 151px;
+            // height: 44px;
+        }
+    }
+
+    &__note {
+        margin-top: 10px;
+
+        .footer__secure {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+
+            .img-secure {
+                display: flex;
+                gap: 10px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: var(--dm-14);
+                line-height: var(--dm-20);
+                font-style: normal;
+                font-family: var(--font-inter);
+                color: var(--Text-Neutral-Accent, #D2D2D2);
+            }
+        }
+
+        .footer__text {
+            font-weight: 400;
+            font-size: var(--dm-14);
+            line-height: var(--dm-20);
+            font-style: normal;
+            font-family: var(--font-inter);
+            color: var(--Text-Neutral-Accent, #D2D2D2);
+        }
+
+        .footer__input {
+            width: 100%;
+            margin-top: 15px;
+            height: 50px;
+            background: var(--Background-Neutral-Normal, #1F2023);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-weight: 400;
+                font-size: var(--dm-14);
+                line-height: var(--dm-20);
+                font-style: normal;
+                font-family: var(--font-inter);
+                color: var(--Text-Neutral-Accent, #D2D2D2);
+                text-align: center;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-top: 40px;
+
+    }
+
+    &__payments {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+
+        img {
+            height: 26px;
+            opacity: 0.9;
+            transition: .2s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        .footer__top {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .footer__secure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                font-weight: 400;
+                font-size: var(--dm-14);
+                line-height: var(--dm-20);
+                font-style: normal;
+                font-family: var(--font-inter);
+                color: var(--Text-Neutral-Accent, #D2D2D2);
+            }
+        }
+
+        .footer__text {
+            text-align: center;
+        }
+
+        &__bottom {
+            text-align: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        &__payments {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 0px 20px;
+
+            img {
+                height: 26px;
+                // flex: 1 20%;
+            }
+        }
+    }
+}
