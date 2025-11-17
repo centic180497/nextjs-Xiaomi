@@ -1,0 +1,70 @@
+.promo-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(19, 20, 21, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.promo-modal {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+
+    .image-box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 350 / 404;
+        // padding-top: calc(404 / 350 * 100%);
+        border-radius: 16px;
+        overflow: hidden;
+
+        .modal-image {
+            object-fit: cover;
+            border-radius: var(--dm-16);
+        }
+    }
+
+    .close-btn {
+        cursor: pointer;
+        z-index: 20;
+        background: var(--Background-Neutral-Normal, #1f2023);
+        border: none;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .btn-see-more {
+        z-index: 20;
+        background: var(--color-primary);
+        cursor: pointer;
+        border: none;
+        border-radius: 100px;
+        padding: var(--dm-8) var(--dm-32);
+        font-weight: 900;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: var(--dm-16);
+        line-height: var(--dm-24);
+        font-family: var(--font-inter);
+        font-style: italic;
+    }
+}

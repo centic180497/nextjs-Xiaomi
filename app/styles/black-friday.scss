@@ -1,0 +1,181 @@
+.black-new-sale {
+    margin-top: var(--dm-40);
+    display: flex;
+    gap: 20px;
+
+    .black-friday {
+        width: 54%;
+
+        .image-wrapper img {
+            width: 100%;
+            max-width: 610px;
+            object-fit: cover;
+            border-radius: var(--dm-12);
+        }
+
+        .top-products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .top-products-title {
+                font-family: "Inter", sans-serif;
+                font-weight: 900;
+                font-style: italic;
+                font-size: var(--dm-24);
+                text-transform: uppercase;
+                color: #f7c600;
+            }
+
+            .top-products-nav {
+                display: flex;
+                gap: 10px;
+
+                .swiper-button {
+                    background: #383A42;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: var(--dm-12);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #555;
+                    }
+                }
+            }
+        }
+    }
+
+    .wraper-product {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+
+        .new-products,
+        .sales {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            .title-new-product,
+            .title-sale-product {
+                font-size: var(--dm-24);
+                line-height: var(--dm-48);
+                font-weight: 900;
+                color: var(--color-primary);
+            }
+
+            img {
+                margin-top: 9px;
+                width: 100%;
+                max-width: 240px;
+                height: 240px;
+                object-fit: cover;
+                border-radius: var(--dm-12);
+            }
+        }
+    }
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1024) {
+    .black-new-sale {
+        flex-direction: column;
+
+        .black-friday {
+            width: 100%;
+
+            .image-wrapper img {
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                border-radius: var(--dm-12);
+            }
+
+            .top-products-title {
+                font-size: var(--dm-18);
+                line-height: var(--dm-32);
+                font-weight: 900;
+                color: var(--color-primary);
+                text-transform: uppercase;
+            }
+        }
+
+        .wraper-product {
+            flex-direction: row; // vẫn ngang
+            justify-content: space-between; // đẩy 2 thằng sang 2 đầu
+            gap: 10px;
+            margin-top: 20px;
+
+            .new-products,
+            .sales {
+                width: 100%;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .title-new-product,
+                .title-sale-product {
+                    font-size: var(--dm-18);
+                    line-height: var(--dm-32);
+                    font-weight: 900;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .black-new-sale {
+        .black-friday {
+            width: 100%;
+
+            .image-wrapper img {
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                border-radius: var(--dm-12);
+            }
+
+            .top-products-header {
+                .top-products-title {
+                    font-size: var(--dm-18);
+                    line-height: var(--dm-32);
+                    font-weight: 900;
+                    color: var(--color-primary);
+                }
+            }
+
+        }
+
+        .wraper-product {
+            display: flex;
+            flex-direction: row; // vẫn ngang
+            justify-content: space-between; // đẩy 2 thằng sang 2 đầu
+            gap: 10px;
+
+            .new-products,
+            .sales {
+                width: 50%; // mỗi thằng chiếm nửa màn hình
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    // width: 167px;
+                    // height: 167px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
